@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>FAQs &amp; Help - The Royal Krishna Holidays | Char Dham Yatra &amp; Spiritual Journeys</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="keywords"/>
+<meta content="Find answers to frequently asked questions about The Royal Krishna Holidays, Char Dham Yatra packages, booking process, cancellation policy, and more." name="description"/>
+<!-- Favicon -->
+<link href="../images/favicon.png" rel="icon" type="image/png"/>
+<!-- Google Web Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Nunito:wght@600;700;800&amp;family=Playfair+Display:wght@500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icon Font Stylesheet -->
+<link href="../styles/all.min.css" rel="stylesheet"/>
+<link href="../styles/bootstrap-icons.css" rel="stylesheet"/>
+<!-- Libraries Stylesheet -->
+<link href="../styles/animate.min.css" rel="stylesheet"/>
+<link href="../styles/owl.carousel.min.css" rel="stylesheet"/>
+<link href="../styles/tempusdominus-bootstrap-4.min.css" rel="stylesheet"/>
+<!-- Customized Bootstrap Stylesheet -->
+<link href="../styles/bootstrap.min.css" rel="stylesheet"/>
+<!-- Template Stylesheet -->
+<link href="../styles/style.css" rel="stylesheet"/>
+<style>
+        .faq-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .faq-header h6 {
+            color: #EBA714;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .faq-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+        }
+        
+        .faq-header .divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+        
+        .faq-item {
+            background: #fff;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .faq-question i {
+            color: #EBA714;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding: 0 25px;
+        }
+        
+        .faq-answer p {
+            color: #6c757d;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            padding-bottom: 20px;
+        }
+        
+        .faq-item.active .faq-question {
+            background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%);
+        }
+        
+        .faq-item.active .faq-question h3 {
+            color: #fff;
+        }
+        
+        .faq-item.active .faq-question i {
+            color: #fff;
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-categories {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .faq-category-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            margin: 5px;
+            border-radius: 25px;
+            background: #fff;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .faq-category-btn:hover,
+        .faq-category-btn.active {
+            background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(235,167,20,0.3);
+        }
+        
+        .contact-cta {
+            background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+        }
+        
+        .contact-cta h3 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .contact-cta p {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .contact-cta .btn {
+            margin: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 50px 0;
+            }
+            
+            .faq-question h3 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Spinner Start -->
+<div class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
+<div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+<span class="sr-only">Loading...</span>
+</div>
+</div>
+<!-- Spinner End -->
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark px-5 d-none d-lg-block">
+<div class="row gx-0">
+<div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+<div class="d-inline-flex align-items-center" style="height: 45px;">
+<small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9555188688</small>
+<small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@theroyalkrishnaholidays.com</small>
+</div>
+</div>
+<div class="col-lg-4 text-center text-lg-end">
+<div class="d-inline-flex align-items-center" style="height: 45px;">
+<a aria-label="Facebook" class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/share/1DzbnFuw7D/" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+<a aria-label="Instagram" class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/divine_earth_holidays?utm_source=qr&amp;obrf=MTloZmp3dW5jbXUzNA==" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Topbar End -->
+<!-- Navbar Start -->
+<div class="container-fluid position-relative p-0">
+<nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+<a class="navbar-brand p-0" href="../pages/index.html" style="display:flex; align-items:center;">
+<img alt="The Royal Krishna Holidays Logo" src="../images/logo-preview.png" style="max-height:60px; width:auto;"/>
+</a>
+<button class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" type="button">
+<span class="fa fa-bars"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<div class="navbar-nav ms-auto py-0">
+<a class="nav-item nav-link" href="../pages/index.html">Home</a>
+<a class="nav-item nav-link" href="../pages/domestic-tour.html">Domestic Tour</a>
+<a class="nav-item nav-link" href="../pages/international-tour.html">International Tour</a>
+<a class="nav-item nav-link" href="../pages/about.html">About Us</a>
+<a class="nav-item nav-link active" href="../pages/faq.html">FAQs</a>
+<a class="nav-item nav-link" href="../pages/contact.html">Contact Us</a>
+</div>
+<a class="btn btn-primary rounded-pill py-2 px-4" href="../pages/booking.html">Book Now</a>
+</div>
+</nav>
+</div>
+<!-- Navbar End -->
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/Valley-20of-20Flowers.jpeg') center center no-repeat; background-size: cover;">
+<div class="container text-center py-5">
+<h1 class="display-3 text-white mb-3 animated slideInDown">FAQs &amp; Help</h1>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb justify-content-center mb-0">
+<li class="breadcrumb-item"><a class="text-white" href="../pages/index.html">Home</a></li>
+<li aria-current="page" class="breadcrumb-item text-primary active">FAQs</li>
+</ol>
+</nav>
+</div>
+</div>
+<!-- Page Header End -->
+<!-- FAQ Section Start -->
+<div class="faq-section">
+<div class="container">
+<div class="faq-header wow fadeInUp animated" data-wow-delay="0.1s">
+<h6>FAQs &amp; Help</h6>
+<h1>Frequently Asked Questions</h1>
+<div class="divider"></div>
+<p style="color: #6c757d; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Find answers to common questions about our Char Dham Yatra packages and services</p>
+</div>
+<!-- FAQ Categories -->
+<div class="faq-categories wow fadeInUp animated" data-wow-delay="0.2s">
+<a class="faq-category-btn active" href="#booking">Booking</a>
+<a class="faq-category-btn" href="#payment">Payment</a>
+<a class="faq-category-btn" href="#cancellation">Cancellation</a>
+<a class="faq-category-btn" href="#travel">Travel</a>
+<a class="faq-category-btn" href="#accommodation">Accommodation</a>
+<a class="faq-category-btn" href="#general">General</a>
+</div>
+<!-- Booking FAQs -->
+<div class="faq-category wow fadeInUp animated" data-wow-delay="0.1s" id="booking">
+<h2 style="color: #2c3e50; font-weight: 700; margin-bottom: 30px; text-align: center;">Booking Questions</h2>
+<div class="faq-item active">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>How do I book a Char Dham Yatra package?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>You can book a Char Dham Yatra package through our website, by calling us at +91 9555188688, or by WhatsApp. Simply choose your preferred package, select your travel dates, and provide the number of travelers. Our team will confirm your booking and guide you through the payment process.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Do I need to book in advance?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Yes, we recommend booking at least 2-3 weeks in advance, especially during peak season (May-June and September-October). This ensures better accommodation options and availability of preferred travel dates.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Can I customize my package?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Absolutely! We offer fully customizable packages. You can modify the itinerary, add or remove destinations, choose different accommodation types, or extend your stay. Contact our team to discuss your preferences.</p>
+</div>
+</div>
+</div>
+<!-- Payment FAQs -->
+<div class="faq-category wow fadeInUp" data-wow-delay="0.2s" id="payment">
+<h2 style="color: #2c3e50; font-weight: 700; margin-bottom: 30px; margin-top: 50px; text-align: center;">Payment Questions</h2>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>What payment methods do you accept?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>We accept bank transfers, UPI payments, Google Pay, PhonePe, Paytm, and cash payments at our office. For international bookings, we also accept credit/debit cards.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Is there a booking advance required?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Yes, we require a booking advance of 50% of the total package cost to confirm your reservation. The remaining balance can be paid before or on the day of departure.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Are there any hidden charges?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>No, we believe in complete transparency. All costs are clearly mentioned in the package details. There are no hidden charges. Any additional services you opt for will be communicated upfront.</p>
+</div>
+</div>
+</div>
+<!-- Cancellation FAQs -->
+<div class="faq-category wow fadeInUp" data-wow-delay="0.3s" id="cancellation">
+<h2 style="color: #2c3e50; font-weight: 700; margin-bottom: 30px; margin-top: 50px; text-align: center;">Cancellation Policy</h2>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>What is your cancellation policy?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Our cancellation policy is as follows: 100% refund if cancelled 30+ days before departure, 75% refund if cancelled 15-29 days before, 50% refund if cancelled 7-14 days before, and no refund if cancelled less than 7 days before departure.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>How long does it take to process a refund?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Refunds are typically processed within 7-10 business days after the cancellation request is approved. The amount will be credited to the original payment method.</p>
+</div>
+</div>
+</div>
+<!-- Travel FAQs -->
+<div class="faq-category wow fadeInUp" data-wow-delay="0.1s" id="travel">
+<h2 style="color: #2c3e50; font-weight: 700; margin-bottom: 30px; margin-top: 50px; text-align: center;">Travel Questions</h2>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>What is the best time for Char Dham Yatra?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>The Char Dham Yatra typically opens in late April/early May and closes in October/November. The best time to visit is May-June and September-October when the weather is pleasant. The monsoon months (July-August) can be challenging due to landslides.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>What is the fitness level required for Char Dham Yatra?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>The yatra involves moderate trekking, especially to Kedarnath (16km trek) and Yamunotri (6km trek). A basic level of fitness is recommended. Elderly pilgrims can opt for pony/palanquin services available at all dhams.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Do you provide transportation during the yatra?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Yes, all our packages include comfortable transportation (Tempo Traveler/SUV/Bus depending on group size) for the entire duration of the yatra. The vehicles are well-maintained and driven by experienced drivers familiar with mountain routes.</p>
+</div>
+</div>
+</div>
+<!-- Accommodation FAQs -->
+<div class="faq-category wow fadeInUp" data-wow-delay="0.2s" id="accommodation">
+<h2 style="color: #2c3e50; font-weight: 700; margin-bottom: 30px; margin-top: 50px; text-align: center;">Accommodation Questions</h2>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>What type of accommodation is provided?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>We provide clean and comfortable hotel/guest house accommodation. Depending on the package, you can choose from budget, standard, or premium options. All accommodations are selected for their cleanliness, safety, and proximity to the temples.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Are meals included in the package?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Yes, most of our packages include breakfast and dinner. Some premium packages include all meals. Pure vegetarian meals are provided throughout the yatra, keeping in mind the spiritual nature of the journey.</p>
+</div>
+</div>
+</div>
+<!-- General FAQs -->
+<div class="faq-category wow fadeInUp" data-wow-delay="0.3s" id="general">
+<h2 style="color: #2c3e50; font-weight: 700; margin-bottom: 30px; margin-top: 50px; text-align: center;">General Questions</h2>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Do you provide helicopter services for Kedarnath?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Yes, we can arrange helicopter tickets for Kedarnath Yatra. Please note that helicopter tickets are subject to availability and weather conditions. We recommend booking helicopter services well in advance.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Is it safe for solo female travelers?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Yes, Char Dham Yatra is safe for solo female travelers. Our experienced staff ensures the safety and comfort of all travelers. We can also arrange for female co-travelers if preferred.</p>
+</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFAQ(this)">
+<h3>Do you arrange group tours?</h3>
+<i class="fa fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Yes, we regularly organize group tours for Char Dham Yatra. Group tours are a great way to meet fellow pilgrims and enjoy the journey together. Contact us for upcoming group departure dates.</p>
+</div>
+</div>
+</div>
+<!-- Contact CTA -->
+<div class="contact-cta wow fadeInUp" data-wow-delay="0.1s">
+<h3>Still Have Questions?</h3>
+<p>Our team is here to help you with any queries you may have about our packages and services.</p>
+<a class="btn btn-light rounded-pill px-4 py-2" href="tel:+919555188688" style="color: #EBA714; font-weight: 600;">
+<i class="fa fa-phone me-2"></i>Call Us
+                </a>
+<a class="btn btn-success rounded-pill px-4 py-2" href="https://wa.me/919555188688?text=I%20have%20a%20question%20about%20your%20travel%20packages" style="background: #25D366; border: none; font-weight: 600;" target="_blank">
+<i class="fab fa-whatsapp me-2"></i>WhatsApp Us
+                </a>
+</div>
+</div>
+</div>
+<!-- FAQ Section End -->
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+<div class="container py-5">
+<div class="row g-5">
+<div class="col-lg-3 col-md-6">
+<h4 class="text-white mb-3">Company</h4>
+<a class="btn btn-link" href="../pages/about.html">About Us</a>
+<a class="btn btn-link" href="../pages/contact.html">Contact Us</a>
+<a class="btn btn-link" href="../pages/privacypolicy.html">Privacy Policy</a>
+<a class="btn btn-link" href="../pages/terms.html">Terms &amp; Condition</a>
+<a class="btn btn-link" href="../pages/faq.html">FAQs &amp; Help</a>
+</div>
+<div class="col-lg-3 col-md-6">
+<h4 class="text-white mb-3">Contact</h4>
+<p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Pitampura, Delhi</p>
+<p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9555188688</p>
+<p class="mb-2"><i class="fa fa-envelope me-3"></i>info@theroyalkrishnaholidays.com</p>
+<div class="d-flex pt-2">
+<a aria-label="Instagram" class="btn btn-outline-light btn-social" href="https://www.instagram.com/divine_earth_holidays?utm_source=qr&amp;obrf=MTloZmp3dW5jbXUzNA==" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
+<a aria-label="Facebook" class="btn btn-outline-light btn-social" href="https://www.facebook.com/share/1DzbnFuw7D/" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<h4 class="text-white mb-3">Newsletter</h4>
+<p>Get Every Monthly
+                        Newsletter</p>
+<div class="position-relative mx-auto" style="max-width: 400px;">
+<input class="form-control border-primary w-100 py-3 ps-4 pe-5" fdprocessedid="gnddsp" placeholder="Your email" type="text"/>
+<button class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" fdprocessedid="yzstsc" type="button">SignUp</button>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="copyright">
+<div class="row">
+<div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        © <a class="border-bottom" href="#">Copyright 2026 by The Royal Krishna Holidays</a>, All Rights Reserved.
+                    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer End -->
+<!-- JavaScript Libraries -->
+<script src="../scripts/jquery-3.4.1.min.js"></script>
+<script src="../scripts/bootstrap.bundle.min.js"></script>
+<script src="../scripts/wow.min.js"></script>
+<script src="../scripts/easing.min.js"></script>
+<script src="../scripts/waypoints.min.js"></script>
+<script src="../scripts/owl.carousel.min.js"></script>
+<script src="../scripts/moment.min.js"></script>
+<script src="../scripts/moment-timezone.min.js"></script>
+<script src="../scripts/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Template Javascript -->
+<script src="../scripts/main.js"></script>
+<!-- FAQ Toggle Script -->
+<script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+        
+        // Smooth scroll for category buttons
+        document.querySelectorAll('.faq-category-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all buttons
+                document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Smooth scroll to category
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Open first FAQ item by default
+        document.querySelector('.faq-item').classList.add('active');
+    </script>
+</body></html>
