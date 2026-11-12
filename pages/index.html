@@ -24,6 +24,37 @@
 <!-- Template Stylesheet -->
 <link href="../styles/style.css" rel="stylesheet"/>
 <!-- Popup Modal Section -->
+
+<style id="search-visibility-fix">
+#search-input {
+  position: relative !important;
+  z-index: 2 !important;
+  color: #222 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+#search-input::placeholder {
+  color: #555 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #555 !important;
+  text-shadow: none !important;
+}
+#package-search-button {
+  z-index: 30 !important;
+  pointer-events: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+#suggestions {
+  z-index: 40 !important;
+}
+</style>
+
 </head><body><div id="bookingPopup" style="display: none; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 9999; overflow-y: auto; backdrop-filter: blur(5px);">
 <div onclick="if(event.target === this) closeBookingPopup();" style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 20px;">
 <div style="background: #fff; border-radius: 25px; max-width: 500px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: popupSlide 0.5s ease; overflow: hidden;">
@@ -35,7 +66,7 @@
                 </button>
 <div style="text-align: center;">
 <div style="width: 70px; height: 70px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; border: 2px solid rgba(255,255,255,0.3);">
-<span style="font-size: 2rem;">✈️</span>
+<span style="font-size: 2rem;">🧭</span>
 </div>
 <h2 style="color: #fff; font-family: 'Playfair Display', serif; font-weight: 700; margin: 0 0 5px; font-size: 1.8rem;">Book Your Journey</h2>
 <p style="color: rgba(255,255,255,0.9); margin: 0; font-size: 0.95rem;">Fill the form and get instant confirmation on WhatsApp</p>
@@ -85,6 +116,7 @@
 <option value="Jibhi Tirthan Valley">Jibhi Tirthan Valley</option>
 <option value="Kauri Pass Trek">Kauri Pass Trek</option>
 </optgroup>
+<option value="Auli Chopta 4N/5D">Auli &amp; Chopta – 4N/5D</option><option value="Rajasthan Jaipur Udaipur Jodhpur Jaisalmer 7N/8D">Rajasthan Circuit – 7N/8D</option><option value="Nepal Kathmandu Pokhara Jomsom Muktinath 6 Nights">Nepal – 6 Nights (Kathmandu, Pokhara, Jomsom, Muktinath)</option><option value="Mussoorie Nainital Ranikhet">Mussoorie, Nainital &amp; Ranikhet</option>
 <optgroup label="International">
 <option value="Thailand Bangkok Phuket">Thailand Bangkok Phuket</option>
 <option value="Bali Honeymoon Special">Bali Honeymoon Special</option>
@@ -122,7 +154,7 @@
 </div>
 <!-- Floating Button to Open Popup -->
 <button fdprocessedid="b4p67j" onclick="openBookingPopup()" onmouseout="this.style.transform='scale(1)';" onmouseover="this.style.transform='scale(1.1)';" style="position: fixed; bottom: 30px; right: 30px; z-index: 9998; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; border: none; width: 60px; height: 60px; border-radius: 50%; cursor: pointer; box-shadow: 0 10px 30px rgba(235,167,20,0.4); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: all 0.3s ease;">
-    ✈️
+    🧭
 </button>
 <!-- Popup Animation Style -->
 <style>
@@ -385,8 +417,13 @@
 </div>
 </div>
 <!-- Topbar End -->
+<style>
+.hero-photo-slideshow{position:relative;isolation:isolate;}
+.hero-photo-slideshow:before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url('../images/Kedarnath-20Yatra-20Ex-20Delhi.jpeg');background-size:cover;background-position:center;animation:heroTravelSlides 24s infinite;}
+@keyframes heroTravelSlides{0%,23%{background-image:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url('../images/Kedarnath-20Yatra-20Ex-20Delhi.jpeg');}25%,48%{background-image:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url('../images/kashmir-2.jpeg');}50%,73%{background-image:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url('../images/uttarakhand.jpeg');}75%,98%{background-image:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),url('../images/rajasthan.jpeg');}}
+</style>
 <!-- Navbar & Hero Start -->
-<div class="container-fluid position-relative p-0">
+<div class="container-fluid position-relative p-0 hero-photo-slideshow">
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
 <a class="navbar-brand p-0" href="../pages/index.html" style="display:flex; align-items:center;">
 <img alt="The Royal Krishna Holidays Logo" src="../images/logo-preview.png" style="max-height:60px; width:auto;"/>
@@ -432,7 +469,7 @@
 <div style="position: relative; display: flex; align-items: center; background: rgba(255, 255, 255, 0.95); border-radius: 50px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.3s ease;">
 <i class="fa fa-search" style="position: absolute; left: 20px; color: #6c757d; font-size: 1.2rem; pointer-events: none; z-index: 2;"></i>
 <input class="form-control" fdprocessedid="z8loeq" id="search-input" onblur="this.parentElement.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';" onfocus="this.parentElement.style.boxShadow='0 8px 32px rgba(235,167,20, 0.4)';" placeholder="Eg: Char Dham Yatra, Leh Ladakh, Thailand..." style="border: none; border-radius: 50px; padding: 15px 100px 15px 50px; font-size: 1rem; background: transparent; width: 100%; outline: none; box-shadow: none; color: #333;" type="text"/>
-<button fdprocessedid="a8l7aq" onclick="handleSearch()" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 15px rgba(235,167,20, 0.4)';" style="position: absolute; right: 5px; padding: 12px 25px; border-radius: 25px; border: none; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: white; font-weight: 600; cursor: pointer; transition: all 0.3s ease; white-space: nowrap;" type="button">
+<button id="package-search-button" type="button" onclick="if(window.handleSearch){window.handleSearch();} return false;" style="position:absolute; right:5px; top:50%; transform:translateY(-50%); z-index:30; pointer-events:auto; padding:12px 25px; border-radius:25px; border:0; background:linear-gradient(135deg,#eba714 0%,#d89400 100%); color:#fff; font-weight:700; cursor:pointer; white-space:nowrap; opacity:1; visibility:visible;">
                             Search
                         </button>
 </div>
@@ -596,130 +633,106 @@
         }
     </style>
 <script>
-        // Array of package objects with names and their corresponding URLs
-        var packages = [
-            { name: 'Char Dham Yatra from Delhi', url: 'chardham-yatra-from-delhi.html' },
-            { name: 'Do Dham Yatra from Delhi', url: 'dodham-yatra-from-delhi.html' },
-            { name: 'Kedarnath Yatra from Delhi', url: 'kedarnath-yatra-from-delhi.html' },
-            { name: 'Char Dham Yatra from Haridwar', url: 'chardham-yatra-from-haridwar.html' },
-            { name: 'Do Dham Yatra from Haridwar', url: 'dodham-yatra-from-haridwar.html' },
-            { name: 'Kedarnath Yatra from Haridwar', url: 'kedarnath-yatra-from-haridwar.html' },
-            { name: 'Chopta Tungnath - 3 Nights / 4 Days', url: 'chopta-tungnath-tour.html' },
-            { name: 'Chopta Tungnath Tour', url: 'chopta-tungnath-tour.html' },
-            { name: 'Leh Ladakh - 10 Nights / 11 Days', url: 'leh-ladakh-tour.html' },
-            { name: 'Leh Ladakh Tour', url: 'leh-ladakh-tour.html' },
-            { name: 'Spiti Valley - 8 Nights / 9 Days', url: 'spiti-valley-tour.html' },
-            { name: 'Spiti Valley Tour', url: 'spiti-valley-tour.html' },
-            { name: 'Valley of Flowers', url: 'valley-of-flowers-tour.html' },
-            { name: 'Udaipur Tour', url: 'udaipur-tour.html' },
-            { name: 'Manali Kasol Solang Sissu - 5 Nights / 6 Days', url: 'manali-kasol-solang-sissu-tour.html' },
-            { name: 'Manali Kasol Solang Sissu Tour', url: 'manali-kasol-solang-sissu-tour.html' },
-            { name: 'Manali Tour', url: 'manali-kasol-solang-sissu-tour.html' },
-            { name: 'Jibhi - 4 Nights / 5 Days', url: 'jibhi-tour.html' },
-            { name: 'Jibhi Tour', url: 'jibhi-tour.html' },
-            { name: 'Kauri Pass - 5 Nights / 6 Days', url: 'kauri-pass-trek.html' },
-            { name: 'Kauri Pass Trek', url: 'kauri-pass-trek.html' },
-            { name: 'Thailand Tour', url: 'thailand-tour.html' },
-            { name: 'Thailand', url: 'thailand-tour.html' },
-            { name: 'Bali Tour', url: 'bali-tour.html' },
-            { name: 'Bali', url: 'bali-tour.html' },
-            { name: 'Vietnam Tour', url: 'vietnam-tour.html' },
-            { name: 'Vietnam', url: 'vietnam-tour.html' },
-            { name: 'Dubai Tour', url: 'dubai-tour.html' },
-            { name: 'Dubai', url: 'dubai-tour.html' },
-            { name: 'Char Dham Yatra', url: 'chardham-yatra-from-delhi.html' },
-            { name: 'Do Dham Yatra', url: 'dodham-yatra-from-delhi.html' },
-            { name: 'Kedarnath Yatra', url: 'kedarnath-yatra-from-delhi.html' }
-        ];
-    
-        // Get elements
-        var searchInput = document.getElementById('search-input');
-        var suggestions = document.getElementById('suggestions');
-    
-        // Function to handle search
-        function handleSearch() {
-            var inputValue = searchInput.value.toLowerCase().trim();
-            if (inputValue) {
-                var foundPackage = packages.find(function(pkg) {
-                    return pkg.name.toLowerCase().includes(inputValue);
-                });
-                if (foundPackage) {
-                    window.location.href = foundPackage.url;
-                }
-            }
-        }
-    
-        // Event listener for input
-        searchInput.addEventListener('input', function() {
-            var inputValue = searchInput.value.toLowerCase();
-            suggestions.innerHTML = '';
-            
-            if (inputValue) {
-                var filteredPackages = packages.filter(function(pkg) {
-                    return pkg.name.toLowerCase().includes(inputValue);
-                });
-    
-                // Remove duplicates
-                var uniquePackages = [];
-                var seenUrls = new Set();
-                filteredPackages.forEach(function(pkg) {
-                    if (!seenUrls.has(pkg.url)) {
-                        seenUrls.add(pkg.url);
-                        uniquePackages.push(pkg);
-                    }
-                });
-    
-                // Limit to 8 suggestions
-                uniquePackages.slice(0, 8).forEach(function(pkg) {
-                    var suggestionItem = document.createElement('div');
-                    suggestionItem.className = 'list-group-item list-group-item-action';
-                    suggestionItem.textContent = pkg.name;
-                    suggestionItem.style.cssText = 'cursor: pointer; padding: 12px 20px; border: none; transition: all 0.3s ease; background: white; border-bottom: 1px solid #f0f0f0;';
-                    
-                    suggestionItem.addEventListener('mouseover', function() {
-                        this.style.backgroundColor = '#f8f9fa';
-                        this.style.paddingLeft = '25px';
-                    });
-                    
-                    suggestionItem.addEventListener('mouseout', function() {
-                        this.style.backgroundColor = '';
-                        this.style.paddingLeft = '20px';
-                    });
-                    
-                    suggestionItem.addEventListener('click', function() {
-                        window.location.href = pkg.url;
-                    });
-    
-                    suggestions.appendChild(suggestionItem);
-                });
-    
-                if (uniquePackages.length > 0) {
-                    suggestions.style.display = 'block';
-                } else {
-                    suggestions.style.display = 'none';
-                }
-            } else {
-                suggestions.style.display = 'none';
-            }
-        });
-    
-        // Hide suggestions when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!searchInput.contains(event.target) && !suggestions.contains(event.target)) {
-                suggestions.style.display = 'none';
-            }
-        });
-        
-        // Add keyboard navigation
-        searchInput.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                handleSearch();
-            }
-            if (e.key === 'Escape') {
-                suggestions.style.display = 'none';
-            }
-        });
-    </script>
+
+(function(){
+ const input=document.getElementById('search-input');
+ const box=document.getElementById('suggestions');
+ if(!input||!box)return;
+ const basePath=location.pathname.includes('/pages/')?'':'pages/';
+ const packages=[
+  {name:'Char Dham Yatra ex Delhi',url:'chardham-yatra-from-delhi.html',keys:'char dham chardham yamunotri gangotri kedarnath badrinath delhi uttarakhand'},
+  {name:'Char Dham Yatra ex Haridwar',url:'chardham-yatra-from-haridwar.html',keys:'char dham chardham yamunotri gangotri kedarnath badrinath haridwar uttarakhand'},
+  {name:'Do Dham Yatra ex Delhi',url:'dodham-yatra-from-delhi.html',keys:'do dham dodham kedarnath badrinath delhi uttarakhand'},
+  {name:'Do Dham Yatra ex Haridwar',url:'dodham-yatra-from-haridwar.html',keys:'do dham dodham kedarnath badrinath haridwar uttarakhand'},
+  {name:'Kedarnath Yatra ex Delhi',url:'kedarnath-yatra-from-delhi.html',keys:'kedarnath ek dham do dham char dham delhi uttarakhand'},
+  {name:'Kedarnath Yatra ex Haridwar',url:'kedarnath-yatra-from-haridwar.html',keys:'kedarnath ek dham do dham char dham haridwar uttarakhand'},
+  {name:'Auli Chopta Tour · 4 Nights / 5 Days',url:'auli-chopta-tour.html',keys:'auli chopta joshimath uttarakhand snow hill station'},
+  {name:'Chopta Tungnath Trek',url:'chopta-tungnath-tour.html',keys:'chopta tungnath trek uttarakhand'},
+  {name:'Uttarakhand Tour Packages',url:'uttarakhand-tour-packages.html',keys:'uttarakhand mussoorie nainital ranikhet auli chopta dehradun rishikesh hill station'},
+  {name:'Leh Ladakh Adventure',url:'ladakh-tour-packages.html',keys:'leh ladakh nubra pangong bike adventure'},
+  {name:'Spiti Valley Expedition',url:'spiti-valley-tour.html',keys:'spiti valley kaza himachal'},
+  {name:'Valley of Flowers Trek',url:'valley-of-flowers-tour.html',keys:'valley flowers phoolon ki ghati govindghat uttarakhand trek'},
+  {name:'Udaipur Tour · 3 Nights / 4 Days',url:'udaipur-tour.html',keys:'udaipur rajasthan lake city palace'},
+  {name:'Rajasthan Royal Circuit · 7 Nights / 8 Days',url:'rajasthan-circuit-tour.html',keys:'rajasthan jaipur udaipur jodhpur jaisalmer desert'},
+  {name:'Manali Kasol Jibhi Tour',url:'manali-kasol-solang-sissu-tour.html',keys:'manali kasol jibhi solang sissu himachal'},
+  {name:'Jibhi Valley Tour',url:'jibhi-tour.html',keys:'jibhi himachal valley'},
+  {name:'Kashmir Valley Tour',url:'kashmir-tour-packages.html',keys:'kashmir srinagar gulmarg pahalgam'},
+  {name:'Nepal Himalayan Tour · 6 Nights',url:'nepal-tour.html',keys:'nepal kathmandu pokhara jomsom muktinath'},
+  {name:'Thailand Tour',url:'thailand-tour.html',keys:'thailand bangkok phuket international'},
+  {name:'Bali Tour',url:'bali-tour.html',keys:'bali indonesia international'},
+  {name:'Vietnam Tour',url:'vietnam-tour.html',keys:'vietnam hanoi international'},
+  {name:'Dubai Tour',url:'dubai-tour.html',keys:'dubai uae international'},
+  {name:'Himachal Pradesh Tour Packages',url:'himachal-pradesh-tour-packages.html',keys:'himachal manali kasol jibhi shimla'},
+  {name:'Kauri Pass Trek',url:'kauri-pass-trek.html',keys:'kauri kuari pass trek uttarakhand'}
+ ];
+ const clean=s=>s.toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+ function renderResults(value,showAll){
+  const q=clean(value||'');
+  let found;
+  if(showAll||!q||q==='tour'||q==='tours'||q==='package'||q==='packages'||q==='tour package'||q==='tour packages'){
+   found=packages;
+  } else {
+   const terms=q.split(' ').filter(x=>x.length>1);
+   found=packages.filter(p=>{
+    const hay=clean(p.name+' '+p.keys);
+    return terms.some(t=>hay.includes(t));
+   });
+   if(q.includes('kedarnath')) found=packages.filter(p=>clean(p.keys).includes('kedarnath'));
+   if(q.includes('rajasthan')) found=packages.filter(p=>clean(p.keys).includes('rajasthan'));
+   if(q.includes('uttarakhand')) found=packages.filter(p=>clean(p.keys).includes('uttarakhand'));
+   if(q.includes('nepal')) found=packages.filter(p=>clean(p.keys).includes('nepal'));
+  }
+  box.innerHTML='';
+  const heading=document.createElement('div');
+  heading.textContent=found.length?(q?'Matching tour packages':'Popular tour packages'):'No matching package found';
+  heading.style.cssText='padding:11px 16px;background:#f5f6f8;color:#26364a;font-weight:700;font-size:13px;border-bottom:1px solid #e5e7eb';
+  box.appendChild(heading);
+  if(!found.length){
+   const empty=document.createElement('div');
+   empty.textContent='Try Kedarnath, Char Dham, Rajasthan, Auli, Nepal, Manali or Ladakh.';
+   empty.style.cssText='padding:14px 16px;color:#555;background:#fff;font-size:14px';
+   box.appendChild(empty);
+  }
+  found.forEach(p=>{
+   const a=document.createElement('a');
+   a.href=basePath+p.url;
+   a.textContent=p.name;
+   a.className='list-group-item list-group-item-action';
+   a.style.cssText='display:block;width:100%;text-align:left;border:0;border-bottom:1px solid #eee;padding:12px 16px;background:#fff;color:#26364a;text-decoration:none;font-weight:500;cursor:pointer';
+   a.addEventListener('mouseenter',()=>a.style.background='#fff8e8');
+   a.addEventListener('mouseleave',()=>a.style.background='#fff');
+   box.appendChild(a);
+  });
+  if(found.length>0 && q && found.length>8){
+   const note=document.createElement('div');
+   note.textContent=found.length+' related packages available — scroll to see all';
+   note.style.cssText='padding:9px 16px;background:#fff;color:#777;font-size:12px';
+   box.appendChild(note);
+  }
+  box.style.display='block';
+ }
+ window.handleSearch=()=>{renderResults(input.value,false);input.focus();};
+ const searchButton=document.getElementById('package-search-button');
+ if(searchButton){
+  searchButton.addEventListener('click',function(event){
+   event.preventDefault();
+   event.stopPropagation();
+   window.handleSearch();
+  });
+ }
+ input.addEventListener('focus',()=>{if(!input.value.trim())renderResults('',true);});
+ input.addEventListener('input',()=>renderResults(input.value,false));
+ input.addEventListener('keydown',e=>{
+  if(e.key==='Enter'){e.preventDefault();renderResults(input.value,false);}
+  if(e.key==='Escape')box.style.display='none';
+ });
+ document.addEventListener('click',e=>{if(!input.contains(e.target)&&!box.contains(e.target))box.style.display='none';});
+ const params=new URLSearchParams(location.search);
+ const initial=params.get('search');
+ if(initial){input.value=initial;renderResults(initial,false);setTimeout(()=>input.scrollIntoView({behavior:'smooth',block:'center'}),150);}
+})();
+
+</script>
 </div>
 <!-- Navbar & Hero End -->
 <!-- Navbar & Hero End -->
@@ -1189,6 +1202,7 @@
     }
 }
 </style>
+<section class="container-fluid py-5" id="front-page-dham-highlights" style="background:linear-gradient(135deg,#26384d 0%,#3d4b5d 55%,#5a4528 100%);"><div class="text-center mb-4"><h2 style="color:#fff;font-family:'Playfair Display',serif;font-weight:700;">More Sacred Yatra Packages</h2><p style="color:#fff !important;opacity:1;">Choose a journey that suits your plans</p></div><div class="row g-4"><div class="col-md-4"><div class="package-item h-100 rounded shadow-sm overflow-hidden" style="background:#34485e;border:1px solid rgba(255,255,255,.18);"><img src="../images/do-20dham-20yatra.jpeg" alt="Do Dham Yatra" style="width:100%;height:190px;object-fit:cover"><div class="p-3"><h4 style="color:#fff;">Do Dham Yatra</h4><p style="color:#fff;">Kedarnath &amp; Badrinath pilgrimage options from Delhi and Haridwar. Rates are per person.</p><a class="btn btn-primary rounded-pill" href="dodham-yatra-from-delhi.html">Explore Package</a></div></div></div><div class="col-md-4"><div class="package-item h-100 rounded shadow-sm overflow-hidden" style="background:#34485e;border:1px solid rgba(255,255,255,.18);"><img src="../images/Kedarnath-20Yatra-20Ex-20Haridwar-2.jpeg" alt="Ek Dham Kedarnath Yatra" style="width:100%;height:190px;object-fit:cover"><div class="p-3"><h4 style="color:#fff;">Ek Dham – Kedarnath</h4><p style="color:#fff;">A focused Kedarnath yatra. ₹9,500 per person from Haridwar · minimum 4 persons.</p><a class="btn btn-primary rounded-pill" href="kedarnath-yatra-from-haridwar.html">Explore Package</a></div></div></div><div class="col-md-4"><div class="package-item h-100 rounded shadow-sm overflow-hidden" style="background:#34485e;border:1px solid rgba(255,255,255,.18);"><img src="../images/Chardham-20Yatra-20Ex-20Haridwar.jpeg" alt="Char Dham Yatra" style="width:100%;height:190px;object-fit:cover"><div class="p-3"><h4 style="color:#fff;">Char Dham ex Haridwar</h4><p style="color:#fff;">Complete Himalayan pilgrimage covering all four dhams. ₹17,999 per person from Haridwar · minimum 4 persons.</p><a class="btn btn-primary rounded-pill" href="chardham-yatra-from-haridwar.html">Explore Package</a></div></div></div></div></section>
 <!-- Package Start -->
 <div class="container-xxl py-5 destination">
 <div class="container">
@@ -1196,7 +1210,7 @@
 <h6 class="section-title bg-white text-center text-primary px-3" style="font-family: 'Poppins', sans-serif; font-weight: 600; letter-spacing: 1px;">
         Packages
     </h6>
-<h1 class="mb-5" style="font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.3px;">
+<h1 class="mb-5" style="font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.3px; color:#fff !important; text-shadow:0 2px 6px rgba(0,0,0,.45)">
         Explore Best Selling Char Dham Yatra Packages
     </h1>
 </div>
@@ -1216,7 +1230,7 @@
 <div class="d-flex border-bottom" style="background: #f8f9fa;">
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt text-primary me-1"></i>Char Dham Yatra ex Delhi</small>
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-calendar-alt text-primary me-1"></i>10N/11D</small>
-<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>20 Person</small>
+<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>Per Person</small>
 </div>
 <div class="text-center p-4">
 <h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹25,999.00</h3>
@@ -1244,7 +1258,7 @@
 <div class="d-flex border-bottom" style="background: #f8f9fa;">
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt text-primary me-1"></i>Do Dham Yatra ex Delhi</small>
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-calendar-alt text-primary me-1"></i>5N/6D</small>
-<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>15 Person</small>
+<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>Per Person</small>
 </div>
 <div class="text-center p-4">
 <h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹15,999.00</h3>
@@ -1272,7 +1286,7 @@
 <div class="d-flex border-bottom" style="background: #f8f9fa;">
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt text-primary me-1"></i>Kedarnath Yatra ex Delhi</small>
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-calendar-alt text-primary me-1"></i>4N/5D</small>
-<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>15 Person</small>
+<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>Per Person</small>
 </div>
 <div class="text-center p-4">
 <h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹12,999.00</h3>
@@ -1300,10 +1314,10 @@
 <div class="d-flex border-bottom" style="background: #f8f9fa;">
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt text-primary me-1"></i>Char Dham ex Haridwar</small>
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-calendar-alt text-primary me-1"></i>9N/10D</small>
-<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>20 Person</small>
+<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>Per Person</small>
 </div>
 <div class="text-center p-4">
-<h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹22,999.00</h3>
+<h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹17,999</h3>
 <div class="mb-3">
 <small class="fa fa-star text-warning"></small>
 <small class="fa fa-star text-warning"></small>
@@ -1328,10 +1342,10 @@
 <div class="d-flex border-bottom" style="background: #f8f9fa;">
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt text-primary me-1"></i>Do Dham ex Haridwar</small>
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-calendar-alt text-primary me-1"></i>4N/5D</small>
-<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>15 Person</small>
+<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>Per Person</small>
 </div>
 <div class="text-center p-4">
-<h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹13,999.00</h3>
+<h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹12,500</h3>
 <div class="mb-3">
 <small class="fa fa-star text-warning"></small>
 <small class="fa fa-star text-warning"></small>
@@ -1356,10 +1370,10 @@
 <div class="d-flex border-bottom" style="background: #f8f9fa;">
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-map-marker-alt text-primary me-1"></i>Kedarnath ex Haridwar</small>
 <small class="flex-fill text-center border-end py-2" style="font-size: 0.85rem;"><i class="fa fa-calendar-alt text-primary me-1"></i>3N/4D</small>
-<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>15 Person</small>
+<small class="flex-fill text-center py-2" style="font-size: 0.85rem;"><i class="fa fa-user text-primary me-1"></i>Per Person</small>
 </div>
 <div class="text-center p-4">
-<h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹10,999.00</h3>
+<h3 class="mb-2" style="color: #EBA714; font-weight: 700;">₹9,500</h3>
 <div class="mb-3">
 <small class="fa fa-star text-warning"></small>
 <small class="fa fa-star text-warning"></small>
@@ -1415,7 +1429,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹5,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>15 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/chopta-tungnath-tour.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1447,7 +1461,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹29,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>20 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/ladakh-tour-packages.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1479,7 +1493,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹24,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>15 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/spiti-valley-tour.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1541,9 +1555,9 @@
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-top: 1px solid #e9ecef; padding-top: 15px;">
 <div>
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
-<h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹9,999</h4>
+<h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹6,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>15 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/udaipur-tour.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1575,7 +1589,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹15,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>20 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/manali-kasol-solang-sissu-tour.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1607,7 +1621,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹8,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>15 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/jibhi-tour.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1639,7 +1653,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹12,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>15 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/kauri-pass-trek.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1688,7 +1702,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹35,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>20 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/thailand-tour.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
@@ -1784,7 +1798,7 @@
 <span style="color: #6c757d; font-size: 0.8rem;">Starting from</span>
 <h4 style="color: #EBA714; font-weight: 700; margin: 0; font-size: 1.3rem;">₹49,999</h4>
 </div>
-<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>20 Person</span>
+<span style="color: #6c757d; font-size: 0.85rem;"><i class="fa fa-users me-1"></i>Per Person</span>
 </div>
 <div style="display: flex; gap: 10px;">
 <a href="../pages/dubai-tour.html" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 5px 15px rgba(235,167,20,0.4)';" style="flex: 1; text-align: center; background: linear-gradient(135deg, #EBA714 0%, #EBA714 100%); color: #fff; padding: 12px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View Details</a>
