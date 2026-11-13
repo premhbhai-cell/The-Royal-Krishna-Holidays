@@ -55,6 +55,45 @@
 }
 </style>
 
+<style id="clear-search-tags-fix">
+/* Keep the popular search chips crisp; remove the frosted-glass blur. */
+#search-input, #suggestions, #suggestions * {
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  text-shadow: none !important;
+}
+#suggestions {
+  background: #fff !important;
+  opacity: 1 !important;
+}
+#suggestions .list-group-item {
+  background: #fff !important;
+  color: #172033 !important;
+  opacity: 1 !important;
+}
+#suggestions .list-group-item:hover {
+  background: #f5f6f8 !important;
+  color: #172033 !important;
+}
+#search-input + #package-search-button { opacity: 1 !important; }
+.mt-4.animated.slideInDown > span {
+  background: #fff !important;
+  color: #273244 !important;
+  border: 1px solid rgba(255,255,255,.9) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+.mt-4.animated.slideInDown > span:hover {
+  background: #f2f3f5 !important;
+  color: #172033 !important;
+}
+</style>
+
 <style id="deh-admin-header-style">
 .navbar-admin-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 40px;width:40px;height:40px;margin:0 12px 0 0;border-radius:50%;background:#eca815;color:#172235!important;text-decoration:none!important;font-size:17px;box-shadow:0 3px 10px rgba(0,0,0,.14);transition:transform .2s,background .2s;vertical-align:middle}.navbar-admin-link:hover{background:#f7bd36;color:#172235!important;transform:translateY(-1px)}@media(max-width:991.98px){.navbar-admin-link{margin:8px 12px 8px 0;width:38px;height:38px;flex-basis:38px}.navbar .navbar-collapse .navbar-admin-link{display:inline-flex!important}}
 </style>
@@ -2376,7 +2415,7 @@
 </div>
 <div class="col-lg-3 col-md-6">
 <h4 class="text-white mb-3">Contact</h4>
-<p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Pitampura, Delhi</p>
+<p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Avantika Main Market, Rohini Sector 2, nearest metro station Rohini West, Delhi 110086</p>
 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9555188688</p>
 <p class="mb-2"><i class="fa fa-envelope me-3"></i>divineearthholiday@gmail.com</p>
 <div class="d-flex pt-2">
