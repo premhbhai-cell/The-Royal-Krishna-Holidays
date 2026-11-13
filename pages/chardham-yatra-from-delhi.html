@@ -23,6 +23,9 @@
 <link href="../styles/bootstrap.min.css" rel="stylesheet"/>
 <!-- Template Stylesheet -->
 <link href="../styles/style.css" rel="stylesheet"/>
+<style id="deh-admin-header-style">
+.navbar-admin-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 40px;width:40px;height:40px;margin:0 12px 0 0;border-radius:50%;background:#eca815;color:#172235!important;text-decoration:none!important;font-size:17px;box-shadow:0 3px 10px rgba(0,0,0,.14);transition:transform .2s,background .2s;vertical-align:middle}.navbar-admin-link:hover{background:#f7bd36;color:#172235!important;transform:translateY(-1px)}@media(max-width:991.98px){.navbar-admin-link{margin:8px 12px 8px 0;width:38px;height:38px;flex-basis:38px}.navbar .navbar-collapse .navbar-admin-link{display:inline-flex!important}}
+</style>
 </head>
 <body>
 <!-- Spinner Start -->
@@ -38,7 +41,7 @@
 <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
 <div class="d-inline-flex align-items-center" style="height: 45px;">
 <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9555188688</small>
-<small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@theroyalkrishnaholidays.com</small>
+<small class="text-light"><i class="fa fa-envelope-open me-2"></i>divineearthholiday@gmail.com</small>
 </div>
 </div>
 <div class="col-lg-4 text-center text-lg-end">
@@ -67,6 +70,7 @@
 <a class="nav-item nav-link" href="../pages/about.html">About Us</a>
 <a class="nav-item nav-link" href="../pages/contact.html">Contact Us</a>
 </div>
+<a class="navbar-admin-link" href="../admin.html" aria-label="Admin Panel" title="Admin Panel"><i class="fa fa-user-cog" aria-hidden="true"></i></a>
 <a class="btn btn-primary rounded-pill py-2 px-4" href="../pages/booking.html">Book Now</a>
 </div>
 </nav>
@@ -612,6 +616,7 @@ function submitBooking(event) {
 <!-- Things to Carry Section End -->
 <!-- Gallery Start -->
 <!-- Gallery End -->
+<div class="custom-package-note" style="margin:22px auto;padding:14px 18px;max-width:1100px;border-left:4px solid #EBA714;background:#fff8e8;color:#55421c;border-radius:8px;font-weight:600;">✨ Customized packages are available for this destination. Share your travel dates, budget and requirements with Divine Earth Holidays for a personalized itinerary.</div>
 <!-- Footer Start -->
 <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
 <div class="container py-5">
@@ -628,7 +633,7 @@ function submitBooking(event) {
 <h4 class="text-white mb-3">Contact</h4>
 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Pitampura, Delhi</p>
 <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9555188688</p>
-<p class="mb-2"><i class="fa fa-envelope me-3"></i>info@theroyalkrishnaholidays.com</p>
+<p class="mb-2"><i class="fa fa-envelope me-3"></i>divineearthholiday@gmail.com</p>
 <div class="d-flex pt-2">
 <a aria-label="Instagram" class="btn btn-outline-light btn-social" href="https://www.instagram.com/divine_earth_holidays?utm_source=qr&amp;obrf=MTloZmp3dW5jbXUzNA==" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
 <a aria-label="Facebook" class="btn btn-outline-light btn-social" href="https://www.facebook.com/share/1DzbnFuw7D/" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -668,4 +673,5 @@ function submitBooking(event) {
 <script src="../scripts/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Template Javascript -->
 <script src="../scripts/main.js"></script>
+<script src="../scripts/site-admin.js"></script>
 </body></html>

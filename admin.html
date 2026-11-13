@@ -1,0 +1,193 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Divine Earth Holidays | Admin</title><style>
+:root{--gold:#eca815;--ink:#172235;--muted:#6c7788;--bg:#f3f5f9}*{box-sizing:border-box}body{margin:0;font:15px Inter,Arial,sans-serif;background:var(--bg);color:#263246}.login{min-height:100vh;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#15243b,#354761)}.login-card{background:#fff;padding:34px;border-radius:18px;width:min(420px,100%);box-shadow:0 25px 80px #0004}.login h1{margin:0 0 8px}.login p{color:var(--muted)}input,textarea,select{width:100%;padding:12px;border:1px solid #dce1e9;border-radius:9px;font:inherit;background:#fff}label{display:block;font-weight:650;margin:14px 0 7px}button{border:0;border-radius:9px;padding:11px 16px;background:var(--gold);font-weight:700;cursor:pointer;color:#202938}.btn-dark{background:var(--ink);color:white}.btn-red{background:#ffe8e8;color:#a52828}.shell{display:none;min-height:100vh}.sidebar{width:250px;background:#17243a;color:#fff;padding:25px 16px;position:fixed;inset:0 auto 0 0}.brand{font-size:19px;font-weight:800;padding:5px 10px 25px}.brand span{color:var(--gold)}.nav button{display:block;width:100%;text-align:left;background:transparent;color:#dbe3f1;margin:5px 0;padding:13px}.nav button.active,.nav button:hover{background:#293b58;color:#fff}.main{margin-left:250px;padding:28px;max-width:1500px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.top h1{margin:0}.panel{background:#fff;border:1px solid #e6eaf0;border-radius:14px;padding:22px;margin-bottom:20px;box-shadow:0 4px 18px #1c2c4208}.panel h2{margin:0 0 8px;font-size:20px}.muted{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.package-row{border:1px solid #e6eaf0;padding:14px;border-radius:12px;margin:12px 0}.package-row summary{font-weight:750;cursor:pointer}.package-row img{width:100%;height:110px;object-fit:cover;border-radius:8px;margin-top:10px}.notice{background:#fff6dd;border-left:4px solid var(--gold);padding:13px;border-radius:8px;color:#624b13;margin:12px 0}.hidden{display:none!important}.hero-line{display:grid;grid-template-columns:1fr 2fr 80px;gap:10px;margin:10px 0}.mobile-menu{display:none}.media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:12px;margin-top:15px}.media-card{border:1px solid #e1e6ee;border-radius:10px;padding:8px;background:#fff;min-width:0}.media-card img{width:100%;height:92px;object-fit:cover;border-radius:7px}.media-card small{display:block;overflow-wrap:anywhere;color:#596579;margin:5px 0}.field-label{font-size:13px;color:#596579;font-weight:700;margin:10px 0 5px}.package-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.package-fields .wide{grid-column:1/-1}.package-preview{width:100%;max-width:260px;height:145px;object-fit:cover;border-radius:10px;border:1px solid #e3e7ee}.upload-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.upload-row input[type=file]{max-width:300px;padding:7px}.mini-btn{padding:8px 10px;font-size:12px}.package-row{overflow:hidden}.package-row summary{padding:4px 0}.package-row[open]{border-color:#e8bd55}@media(max-width:800px){.package-fields{grid-template-columns:1fr}.package-fields .wide{grid-column:auto}}@media(max-width:800px){.sidebar{position:static;width:auto;padding:12px}.brand{padding:8px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;width:auto}.main{margin:0;padding:15px}.grid,.three{grid-template-columns:1fr}.top{align-items:flex-start;gap:10px}.top h1{font-size:23px}.hero-line{grid-template-columns:1fr}.login-card{padding:25px}}
+</style></head><body>
+<div class="login" id="login"><div class="login-card"><h1>Divine Earth <span style="color:#eca815">Holidays</span></h1><p>Administrator sign in</p><form id="loginForm"><label>Email address</label><input id="emailLogin" type="email" autocomplete="username" required placeholder="Admin email"><label>Password</label><input id="passLogin" type="password" autocomplete="current-password" required placeholder="Password"><button style="width:100%;margin-top:20px">Login to Dashboard</button><p id="loginError" style="color:#bd2929"></p></form></div></div>
+<div class="shell" id="shell"><aside class="sidebar"><div class="brand">DIVINE EARTH <span>HOLIDAYS</span></div><div class="nav"><button class="active" data-tab="overview">▦ Overview</button><button data-tab="packages">▣ Packages</button><button data-tab="media">▧ Media Library</button><button data-tab="hero">▧ Hero Slider</button><button data-tab="site">⚙ Website Settings</button><button data-tab="content">✎ Page Content</button><button id="logout">↪ Logout</button></div></aside><main class="main"><div class="top"><div><div class="muted">WEBSITE CONTROL PANEL</div><h1 id="pageTitle">Dashboard Overview</h1></div><a href="index.html" target="_blank" class="muted">View Website ↗</a></div>
+<section id="tab-overview" class="tab"><div class="grid three"><div class="panel"><div class="muted">PACKAGE CATALOGUE</div><h2 id="countPackages">—</h2></div><div class="panel"><div class="muted">HERO SLIDES</div><h2 id="countSlides">—</h2></div><div class="panel"><div class="muted">BRAND EMAIL</div><h2 style="font-size:16px">divineearthholiday@gmail.com</h2></div></div><div class="panel"><h2>Welcome to your website manager</h2><p>Manage package photos, prices, titles, descriptions, homepage hero images and common website content from here.</p><div class="notice"><b>Important:</b> This static HTML version saves website settings in this browser and uploaded image files in browser media storage. Changes are visible on this browser/device only. For all visitors and secure login, connect a server/database and secure authentication before production use.</div></div></section>
+<section id="tab-packages" class="tab hidden"><div class="panel"><div class="top"><div><h2>Complete Package Manager</h2><p class="muted">Manage every package card field, price, trip information, highlights and images.</p></div><button id="addPackage" class="btn-dark">＋ Add Package</button></div><div id="packageList"></div><div class="actions"><button id="savePackages">Save All Package Changes</button><button id="resetPackages" class="btn-red">Reset Package Edits</button></div></div></section>
+<section id="tab-media" class="tab hidden"><div class="panel"><h2>Media Library</h2><p class="muted">All images already included in this website, plus images uploaded from this admin panel.</p><div class="upload-row"><input id="mediaUpload" type="file" accept="image/*" multiple><button id="uploadMedia">＋ Upload Images</button><input id="mediaSearch" placeholder="Search image filename" style="max-width:260px"></div><p class="muted" id="mediaStatus">Uploaded images are saved in this browser's media storage. Use Choose Image inside a package or hero slide to apply them.</p><div id="mediaGrid" class="media-grid"></div></div></section>
+<section id="tab-hero" class="tab hidden"><div class="panel"><h2>Homepage Hero Slider</h2><p class="muted">Add, replace or remove the images used in the homepage destination slider. Use image paths such as images/hero-jaipur-hawa-mahal.jpeg.</p><div id="heroList"></div><div class="actions"><button id="addHero" class="btn-dark">＋ Add Slide</button><button id="saveHero">Save Hero Images</button><button id="resetHero" class="btn-red">Reset Hero</button></div></div></section>
+<section id="tab-site" class="tab hidden"><div class="panel"><h2>Website Settings</h2><div class="grid"><div><label>Website / Brand Name</label><input id="brandName" value="Divine Earth Holidays"></div><div><label>Contact Email</label><input id="brandEmail" value="divineearthholiday@gmail.com"></div></div><label>Footer Copyright Text</label><input id="copyrightText" value="Copyright 2026 by Divine Earth Holidays, All Rights Reserved."><div class="actions"><button id="saveSettings">Save Website Settings</button></div></div></section>
+<section id="tab-content" class="tab hidden"><div class="panel"><h2>Page Content Editor</h2><p class="muted">Update common headings or text across pages by entering a CSS selector. This is useful for hero headings, section headings and descriptions.</p><div class="grid"><div><label>CSS selector</label><input id="contentSelector" placeholder="Example: .hero-header h1"></div><div><label>New text</label><input id="contentText" placeholder="Enter replacement text"></div></div><div class="actions"><button id="saveContent">Apply & Save Content</button><button id="clearContent" class="btn-red">Clear Saved Text Changes</button></div><div class="notice">For image updates in packages and hero slides, use their dedicated sections. CSS selector text updates are stored for this browser and applied when the relevant page loads.</div></div></section>
+</main></div>
+<script type="application/json" id="imageManifest">["images/20Delhi.jpeg", "images/Chardham-20Yatra-20Ex-20Delhi.jpeg", "images/Chardham-20Yatra-20Ex-20Haridwar-2.jpeg", "images/Chardham-20Yatra-20Ex-20Haridwar.jpeg", "images/Chopta-20Tungnath-trek.jpeg", "images/Chopta-20Tungnath.jpeg", "images/Do-20Dham-20Yatra-20Ex-20Haridwar-2.jpeg", "images/Himachal-20Pradesh.jpeg", "images/Jibhi-2.jpeg", "images/Jibhi-3.jpeg", "images/Jibhi.jpeg", "images/Kauri-20Pass-2.jpeg", "images/Kauri-20Pass-3.jpeg", "images/Kauri-20Pass.jpeg", "images/Kedarnath-20Yatra-20Ex-20Delhi-2.jpeg", "images/Kedarnath-20Yatra-20Ex-20Delhi.jpeg", "images/Kedarnath-20Yatra-20Ex-20Haridwar-2.jpeg", "images/Kedarnath-20Yatra-20Ex-20Haridwar-3.jpeg", "images/Kedarnath-20Yatra-20Ex-20Haridwar-4.jpeg", "images/Manali-20Kasol-20Solang-20Sissu-2.jpeg", "images/Manali-20Kasol-20Solang-20Sissu-4.jpeg", "images/Manali-20Kasol-20Solang-20Sissu.jpeg", "images/Udaipur-2.jpeg", "images/Udaipur-3.jpeg", "images/Udaipur-4.jpeg", "images/Udaipur.jpeg", "images/Valley-20of-20Flowers-2.jpeg", "images/Valley-20of-20Flowers-4.jpeg", "images/Valley-20of-20Flowers.jpeg", "images/auli-snow-mountains.jpeg", "images/bali.jpeg", "images/bg-hero.jpg", "images/booking.jpg", "images/bungyjumping.jpeg", "images/chardham.jpeg", "images/corbett-elephants.jpeg", "images/do-20dham-20yatra.jpeg", "images/dubai.jpeg", "images/fa-brands-400.svg", "images/fa-regular-400.svg", "images/fa-solid-900.svg", "images/favicon.png", "images/gallery-1.jpeg", "images/gallery-10.jpeg", "images/gallery-11.jpeg", "images/gallery-12.jpeg", "images/gallery-13.jpeg", "images/gallery-14.jpeg", "images/gallery-15.jpeg", "images/gallery-16.jpeg", "images/gallery-17.jpeg", "images/gallery-18.jpeg", "images/gallery-2.jpeg", "images/gallery-3.jpeg", "images/gallery-4.jpeg", "images/gallery-5.jpeg", "images/gallery-6.jpeg", "images/gallery-8.jpeg", "images/gallery-9.jpeg", "images/glyphicons-halflings-regular.svg", "images/haridwar-ganga-aarti.jpeg", "images/hero-auli-snow-mountains.jpeg", "images/hero-corbett-elephants.jpeg", "images/hero-haridwar-ganga-aarti.jpeg", "images/hero-jaipur-hawa-mahal.jpeg", "images/hero-jodhpur-blue-city.jpeg", "images/hero-kainchi-dham-temple.jpeg", "images/hero-nainital-aerial.jpeg", "images/hero-nainital-lake.jpeg", "images/hero-rishikesh-river.jpeg", "images/hero-udaipur-palace.jpeg", "images/hero-uttarakhand-waterfall.jpeg", "images/jaipur-20cycle.jpeg", "images/jaipur-hawa-mahal.jpeg", "images/jodhpur-blue-city.jpeg", "images/kainchi-dham-temple.jpeg", "images/kashmir-2.jpeg", "images/kashmir-3.jpeg", "images/kashmir.jpeg", "images/ladakh-2.jpeg", "images/ladakh-3.jpeg", "images/ladakh-4.jpeg", "images/ladakh.jpeg", "images/logo-preview.png", "images/logo.jpeg", "images/nainital-aerial.jpeg", "images/nainital-lake.jpeg", "images/owl.video.play.png", "images/page_not_found.svg", "images/rafting.jpeg", "images/rajasthan.jpeg", "images/rishikesh-river.jpeg", "images/spitivalley.jpeg", "images/thailand.jpeg", "images/trek.jpeg", "images/udaipur-palace.jpeg", "images/uttarakhand-waterfall.jpeg", "images/uttarakhand.jpeg", "images/veitnam.jpeg"]</script><script type="application/json" id="defaults">[
+  {
+    "key": "chardham-yatra-from-delhi.html",
+    "title": "Chardham Yatra Ex Delhi",
+    "price": "₹25,999.00",
+    "description": "Complete Char Dham Yatra from Delhi covering Yamunotri, Gangotri, Kedarnath & Badrinath 🙏",
+    "image": "../images/Chardham-20Yatra-20Ex-20Delhi.jpeg",
+    "href": "../pages/chardham-yatra-from-delhi.html",
+    "location": "Char Dham Yatra ex Delhi",
+    "duration": "10N/11D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "dodham-yatra-from-delhi.html",
+    "title": "Do Dham Yatra Ex Delhi",
+    "price": "₹15,999",
+    "description": "Kedarnath & Badrinath pilgrimage options from Delhi and Haridwar. Rates are per person.",
+    "image": "../images/do-20dham-20yatra.jpeg",
+    "href": "../pages/dodham-yatra-from-delhi.html",
+    "perPerson": "Per Person",
+    "location": "Do Dham Yatra ex Delhi",
+    "duration": "5N/6D"
+  },
+  {
+    "key": "kedarnath-yatra-from-delhi.html",
+    "title": "Kedarnath Yatra Ex Delhi",
+    "price": "₹12,999.00",
+    "description": "Sacred Kedarnath Yatra from Delhi with VIP darshan and comfortable accommodations 🕉️",
+    "image": "../images/Kedarnath-20Yatra-20Ex-20Delhi-2.jpeg",
+    "href": "../pages/kedarnath-yatra-from-delhi.html",
+    "location": "Kedarnath Yatra ex Delhi",
+    "duration": "4N/5D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "chardham-yatra-from-haridwar.html",
+    "title": "Chardham Yatra Ex Haridwar",
+    "price": "₹17,999",
+    "description": "Complete Himalayan pilgrimage covering all four dhams. ₹17,999 per person from Haridwar · minimum 4 persons.",
+    "image": "../images/Chardham-20Yatra-20Ex-20Haridwar.jpeg",
+    "href": "../pages/chardham-yatra-from-haridwar.html",
+    "perPerson": "Per Person",
+    "location": "Char Dham ex Haridwar",
+    "duration": "9N/10D"
+  },
+  {
+    "key": "dodham-yatra-from-haridwar.html",
+    "title": "Do Dham Ex Haridwar",
+    "price": "₹12,500",
+    "description": "Kedarnath and Badrinath from Haridwar with premium facilities and VIP darshan ⛰️",
+    "image": "../images/Do-20Dham-20Yatra-20Ex-20Haridwar-2.jpeg",
+    "href": "../pages/dodham-yatra-from-haridwar.html",
+    "location": "Do Dham ex Haridwar",
+    "duration": "4N/5D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "kedarnath-yatra-from-haridwar.html",
+    "title": "Kedarnath Ex Haridwar",
+    "price": "₹9,500",
+    "description": "A focused Kedarnath yatra. ₹9,500 per person from Haridwar · minimum 4 persons.",
+    "image": "../images/Kedarnath-20Yatra-20Ex-20Haridwar-3.jpeg",
+    "href": "../pages/kedarnath-yatra-from-haridwar.html",
+    "location": "Kedarnath ex Haridwar",
+    "duration": "3N/4D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "chopta-tungnath-tour.html",
+    "title": "Chopta Tungnath",
+    "price": "Chopta Tungnath",
+    "description": "Trek to highest Shiva temple 🏔️",
+    "image": "../images/Chopta-20Tungnath.jpeg",
+    "href": "../pages/chopta-tungnath-tour.html",
+    "perPerson": "Per Person",
+    "location": "(128)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "ladakh-tour-packages.html",
+    "title": "Leh Ladakh",
+    "price": "Leh Ladakh",
+    "description": "Rugged beauty & mountain passes 🏔️",
+    "image": "../images/ladakh.jpeg",
+    "href": "../pages/ladakh-tour-packages.html",
+    "location": "(256)",
+    "duration": "10N/11D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "spiti-valley-tour.html",
+    "title": "Spiti Valley",
+    "price": "Spiti Valley",
+    "description": "Ancient monasteries & landscapes 🏔️",
+    "image": "../images/spitivalley.jpeg",
+    "href": "../pages/spiti-valley-tour.html",
+    "perPerson": "Per Person",
+    "location": "(89)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "valley-of-flowers-tour.html",
+    "title": "Valley Of Flowers",
+    "price": "Valley of Flowers",
+    "description": "UNESCO site with 600+ flowers 🌺",
+    "image": "../images/Valley-20of-20Flowers-4.jpeg",
+    "href": "../pages/valley-of-flowers-tour.html",
+    "perPerson": "Per Person",
+    "location": "(167)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "udaipur-tour.html",
+    "title": "Udaipur",
+    "price": "Udaipur",
+    "description": "Romantic city of lakes 🏰",
+    "image": "../images/Udaipur-4.jpeg",
+    "href": "../pages/udaipur-tour.html",
+    "location": "(203)",
+    "duration": "10N/11D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "manali-kasol-solang-sissu-tour.html",
+    "title": "Manali Kasol Solang Sissu",
+    "price": "Manali Kasol Solang",
+    "description": "Adventure & scenic beauty 🏔️",
+    "image": "../images/Manali-20Kasol-20Solang-20Sissu-4.jpeg",
+    "href": "../pages/manali-kasol-solang-sissu-tour.html",
+    "perPerson": "Per Person",
+    "location": "(312)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "jibhi-tour.html",
+    "title": "Jibhi",
+    "price": "Jibhi",
+    "description": "Serene Tirthan Valley 🌲",
+    "image": "../images/Jibhi.jpeg",
+    "href": "../pages/jibhi-tour.html",
+    "perPerson": "Per Person",
+    "location": "(98)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "kauri-pass-trek.html",
+    "title": "Kauri Pass",
+    "price": "Kauri Pass",
+    "description": "Panoramic Nanda Devi views 🏔️",
+    "image": "../images/Kauri-20Pass.jpeg",
+    "href": "../pages/kauri-pass-trek.html",
+    "perPerson": "Per Person",
+    "location": "(76)",
+    "duration": "Custom itinerary"
+  }
+]</script><script>
+const KEY='deh_site_content_v1',CREDS={email:'divineearthholiday@gmail.com',password:'divineearth5612'};let defaults=[];try{defaults=JSON.parse(document.getElementById('defaults').textContent)}catch(e){};let imageFiles=[];try{imageFiles=JSON.parse(document.getElementById('imageManifest').textContent)}catch(e){};let data={};try{data=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){};
+const $=id=>document.getElementById(id);function persist(){localStorage.setItem(KEY,JSON.stringify(data))}
+function openDB(){return new Promise((resolve,reject)=>{const r=indexedDB.open('DEHMediaLibrary',1);r.onupgradeneeded=()=>r.result.createObjectStore('images',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
+async function saveAsset(file){const db=await openDB(),id='upload-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);await new Promise((res,rej)=>{const tx=db.transaction('images','readwrite');tx.objectStore('images').put({id,name:file.name,type:file.type,blob:file,created:Date.now()});tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close();return 'idb:'+id}
+async function getAssets(){const db=await openDB();const items=await new Promise((res,rej)=>{const r=db.transaction('images').objectStore('images').getAll();r.onsuccess=()=>res(r.result||[]);r.onerror=()=>rej(r.error)});db.close();return items}
+async function assetURL(src){if(!src)return '';if(!src.startsWith('idb:'))return src.startsWith('../images/')?src.replace(/^\.\.\//,''):src;try{const db=await openDB(),item=await new Promise((res,rej)=>{const r=db.transaction('images').objectStore('images').get(src.slice(4));r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});db.close();return item?URL.createObjectURL(item.blob):''}catch(e){return ''}}
+async function deleteAsset(id){const db=await openDB();await new Promise((res,rej)=>{const tx=db.transaction('images','readwrite');tx.objectStore('images').delete(id);tx.oncomplete=res;tx.onerror=()=>rej(tx.error)});db.close()}
+function login(){if($('emailLogin').value.trim().toLowerCase()===CREDS.email&&$('passLogin').value===CREDS.password){$('login').classList.add('hidden');$('shell').style.display='block';render()}else $('loginError').textContent='Incorrect email or password.'}
+$('loginForm').addEventListener('submit',e=>{e.preventDefault();login()});$('logout').onclick=()=>{$('shell').style.display='none';$('login').classList.remove('hidden');$('passLogin').value=''};
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.tab').forEach(x=>x.classList.add('hidden'));$('tab-'+b.dataset.tab).classList.remove('hidden');$('pageTitle').textContent=b.textContent.trim();if(b.dataset.tab==='media')renderMedia()});
+function render(){renderPackages();renderHero();$('countPackages').textContent=(data.packages||defaults).length;$('countSlides').textContent=(data.hero||heroDefaults).length;$('brandEmail').value=data.email||'divineearthholiday@gmail.com';$('brandName').value=data.brand||'Divine Earth Holidays';$('copyrightText').value=data.copyright||'Copyright 2026 by Divine Earth Holidays, All Rights Reserved.'}
+const packageFields=[['title','Package title'],['price','Selling price / rate'],['oldPrice','Old price / MRP'],['category','Category / destination'],['duration','Duration (e.g. 7N/8D)'],['days','Total days'],['nights','Total nights'],['location','Main destination / route'],['perPerson','Rate basis (e.g. Per Person)'],['rating','Rating / stars'],['tag','Card badge (e.g. SPIRITUAL)'],['description','Short card description'],['highlights','Package highlights (one per line)','textarea'],['inclusions','Inclusions (one per line)','textarea'],['exclusions','Exclusions (one per line)','textarea'],['stay','Stay / hotel details','textarea'],['itinerary','Day-wise itinerary','textarea'],['customize','Customized package note'],['key','Existing package page filename (key)'],['href','Package details page link']];
+function renderPackages(){let list=data.packages||JSON.parse(JSON.stringify(defaults));$('packageList').innerHTML='';list.forEach((p,i)=>{let el=document.createElement('details');el.className='package-row';let summary=document.createElement('summary');summary.textContent=(p.title||'New Package')+' — '+(p.price||'Price on request');el.appendChild(summary);let fields=document.createElement('div');fields.className='package-fields';packageFields.forEach(([key,label,type])=>{let wrap=document.createElement('div');if(['highlights','inclusions','exclusions','stay','itinerary','description'].includes(key))wrap.className='wide';let lab=document.createElement('label');lab.className='field-label';lab.textContent=label;let inp=type==='textarea'?document.createElement('textarea'):document.createElement('input');inp.dataset.f=key;inp.value=p[key]??'';if(type==='textarea')inp.rows=key==='itinerary'?5:3;wrap.append(lab,inp);fields.appendChild(wrap);inp.addEventListener('input',()=>{p[key]=inp.value;summary.textContent=(p.title||'New Package')+' — '+(p.price||'Price on request')})});
+let imageWrap=document.createElement('div');imageWrap.className='wide';imageWrap.innerHTML='<label class="field-label">Package card / detail image</label><div class="upload-row"><input data-f="image" placeholder="Select from Media Library or enter image path"><button type="button" class="mini-btn" data-library>Choose Image</button><input type="file" accept="image/*" data-upload><img class="package-preview" alt="Package preview"></div><small class="muted">Upload directly or choose any image from Media Library.</small>';fields.appendChild(imageWrap);el.appendChild(fields);let imgInput=imageWrap.querySelector('[data-f=image]'),preview=imageWrap.querySelector('img');imgInput.value=p.image||'';assetURL(p.image||'').then(u=>preview.src=u||p.image||'');imgInput.oninput=()=>preview.src=imgInput.value;
+imageWrap.querySelector('[data-library]').onclick=()=>{openMediaPicker(src=>{p.image=src;imgInput.value=src;assetURL(src).then(u=>preview.src=u||src)})};imageWrap.querySelector('[data-upload]').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const src=await saveAsset(f);p.image=src;imgInput.value=src;assetURL(src).then(u=>preview.src=u);$('mediaStatus').textContent='Uploaded '+f.name+' successfully.'}catch(err){alert('Image upload failed. Please try a smaller image.')}};
+let actions=document.createElement('div');actions.className='actions';actions.innerHTML='<button type="button" class="btn-red" data-remove></button><button type="button" data-copy>Duplicate Package</button>';el.appendChild(actions);const removeBtn=el.querySelector('[data-remove]');removeBtn.textContent=p.hidden?'Restore Package':'Delete Package';if(p.hidden){el.style.opacity='.65';summary.textContent='[HIDDEN] '+summary.textContent}removeBtn.onclick=()=>{if(p.hidden){p.hidden=false}else if(confirm('Hide this package from the website?')){p.hidden=true}data.packages=list;renderPackages()};el.querySelector('[data-copy]').onclick=()=>{const copy=JSON.parse(JSON.stringify(p));copy.key=(copy.key||'package').replace(/\.html$/,'')+'-copy.html';copy.title=(copy.title||'Package')+' (Copy)';copy.href='pages/'+copy.key;list.splice(i+1,0,copy);data.packages=list;renderPackages()};$('packageList').appendChild(el)});data.packages=list}
+$('savePackages').onclick=()=>{document.querySelectorAll('#packageList .package-row').forEach((el,i)=>{el.querySelectorAll('[data-f]').forEach(inp=>{if(data.packages[i])data.packages[i][inp.dataset.f]=inp.value})});persist();$('countPackages').textContent=data.packages.length;alert('All package details saved. Website cards and matching package pages will use the updated data in this browser.')};$('addPackage').onclick=()=>{data.packages=data.packages||JSON.parse(JSON.stringify(defaults));const newKey='new-package-'+Date.now()+'.html';data.packages.push({key:newKey,title:'New Tour Package',price:'Price on request',oldPrice:'',category:'India Tour',duration:'',days:'',nights:'',location:'',perPerson:'Per Person',rating:'5',tag:'',description:'Add package details here.',highlights:'',inclusions:'',exclusions:'',stay:'',itinerary:'',customize:'Customized package available',image:'images/booking.jpg',href:'package-details.html?package='+encodeURIComponent(newKey.replace(/\.html$/,''))});renderPackages();document.querySelectorAll('.package-row').forEach(x=>x.open=false);$('packageList').lastElementChild.open=true};$('resetPackages').onclick=()=>{if(confirm('Reset all package edits?')){delete data.packages;persist();renderPackages()}};
+async function renderMedia(){const grid=$('mediaGrid'),search=($('mediaSearch').value||'').toLowerCase(),uploads=await getAssets();grid.innerHTML='';const all=[...imageFiles.map(src=>({src,name:src.split('/').pop(),builtin:true})),...uploads.map(x=>({src:'idb:'+x.id,name:x.name,builtin:false}))].filter(x=>x.name.toLowerCase().includes(search));$('mediaStatus').textContent=all.length+' images available. Click “Use in package” to select an image.';for(const item of all){const card=document.createElement('div');card.className='media-card';const im=document.createElement('img');im.alt=item.name;assetURL(item.src).then(u=>im.src=u||item.src);const name=document.createElement('small');name.textContent=item.name;const use=document.createElement('button');use.className='mini-btn';use.textContent='Use in package';use.onclick=()=>{document.querySelector('[data-tab=packages]').click();alert('Open the package you want to edit, then click Choose Image and select this image.');};card.append(im,name,use);if(!item.builtin){const del=document.createElement('button');del.className='mini-btn btn-red';del.textContent='Delete';del.onclick=async()=>{if(confirm('Delete uploaded image?')){await deleteAsset(item.src.slice(4));renderMedia()}};card.append(del)}grid.append(card)}}
+window.openMediaPicker=function(callback){window.mediaPickTarget=callback;const overlay=document.createElement('div');overlay.style='position:fixed;inset:0;background:#101827aa;z-index:9999;display:grid;place-items:center;padding:15px';const box=document.createElement('div');box.style='background:#fff;border-radius:14px;padding:18px;max-width:900px;width:100%;max-height:85vh;overflow:auto';box.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center"><h2>Select an image</h2><button type="button">Close</button></div><div class="media-grid" id="pickerGrid"></div>';box.querySelector('button').onclick=()=>overlay.remove();overlay.append(box);document.body.append(overlay);(async()=>{const uploads=await getAssets(),all=[...imageFiles,...uploads.map(x=>'idb:'+x.id)],g=box.querySelector('#pickerGrid');for(const src of all){const c=document.createElement('button');c.style='background:#fff;border:1px solid #ddd;padding:6px;text-align:left';const im=document.createElement('img');im.style='width:100%;height:95px;object-fit:cover';assetURL(src).then(u=>im.src=u||src);const cap=document.createElement('small');cap.textContent=src.split('/').pop();c.append(im,cap);c.onclick=()=>{callback(src);overlay.remove()};g.append(c)}})()};
+$('uploadMedia').onclick=async()=>{const files=[...$('mediaUpload').files];if(!files.length){alert('Please select image files first.');return}let done=0;for(const f of files){if(!f.type.startsWith('image/'))continue;try{await saveAsset(f);done++}catch(e){alert('Could not upload '+f.name+'. Try a smaller image.')}}$('mediaUpload').value='';$('mediaStatus').textContent=done+' image(s) uploaded.';renderMedia()};$('mediaSearch').oninput=renderMedia;
+const heroDefaults=['images/hero-jaipur-hawa-mahal.jpeg','images/hero-jodhpur-blue-city.jpeg','images/hero-udaipur-palace.jpeg','images/hero-kainchi-dham-temple.jpeg','images/hero-nainital-aerial.jpeg','images/hero-auli-snow-mountains.jpeg'];function renderHero(){let arr=data.hero||heroDefaults;$('heroList').innerHTML='';arr.forEach((src,i)=>{let row=document.createElement('div');row.className='hero-line';row.innerHTML=`<input value="${attr(src)}" aria-label="Image path"><img src="${attr(src)}" style="width:100%;height:48px;object-fit:cover;border-radius:7px"><button class="btn-red">Remove</button><button type="button">Choose</button>`;row.querySelector('input').oninput=e=>{arr[i]=e.target.value;row.querySelector('img').src=e.target.value};row.querySelectorAll('button')[0].onclick=()=>{arr.splice(i,1);data.hero=arr;renderHero()};row.querySelectorAll('button')[1].onclick=()=>openMediaPicker(src=>{arr[i]=src;data.hero=arr;renderHero()});$('heroList').appendChild(row)});data.hero=arr}
+$('addHero').onclick=()=>{data.hero=data.hero||heroDefaults.slice();data.hero.push('images/booking.jpg');renderHero()};$('saveHero').onclick=()=>{persist();$('countSlides').textContent=data.hero.length;alert('Hero images saved.')};$('resetHero').onclick=()=>{delete data.hero;persist();renderHero()};
+$('saveSettings').onclick=()=>{data.brand=$('brandName').value;data.email=$('brandEmail').value;data.copyright=$('copyrightText').value;persist();alert('Website settings saved.')};$('saveContent').onclick=()=>{data.textOverrides=data.textOverrides||{};data.textOverrides[$('contentSelector').value]=$('contentText').value;persist();alert('Text change saved.')};$('clearContent').onclick=()=>{delete data.textOverrides;persist();alert('Saved text overrides cleared.')};
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function attr(s){return esc(s).replace(/`/g,'&#96;')}
+</script></body></html>

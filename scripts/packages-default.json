@@ -1,0 +1,156 @@
+[
+  {
+    "key": "chardham-yatra-from-delhi.html",
+    "title": "Chardham Yatra Ex Delhi",
+    "price": "₹25,999.00",
+    "description": "Complete Char Dham Yatra from Delhi covering Yamunotri, Gangotri, Kedarnath & Badrinath 🙏",
+    "image": "../images/Chardham-20Yatra-20Ex-20Delhi.jpeg",
+    "href": "../pages/chardham-yatra-from-delhi.html",
+    "location": "Char Dham Yatra ex Delhi",
+    "duration": "10N/11D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "dodham-yatra-from-delhi.html",
+    "title": "Do Dham Yatra Ex Delhi",
+    "price": "₹15,999",
+    "description": "Kedarnath & Badrinath pilgrimage options from Delhi and Haridwar. Rates are per person.",
+    "image": "../images/do-20dham-20yatra.jpeg",
+    "href": "../pages/dodham-yatra-from-delhi.html",
+    "perPerson": "Per Person",
+    "location": "Do Dham Yatra ex Delhi",
+    "duration": "5N/6D"
+  },
+  {
+    "key": "kedarnath-yatra-from-delhi.html",
+    "title": "Kedarnath Yatra Ex Delhi",
+    "price": "₹12,999.00",
+    "description": "Sacred Kedarnath Yatra from Delhi with VIP darshan and comfortable accommodations 🕉️",
+    "image": "../images/Kedarnath-20Yatra-20Ex-20Delhi-2.jpeg",
+    "href": "../pages/kedarnath-yatra-from-delhi.html",
+    "location": "Kedarnath Yatra ex Delhi",
+    "duration": "4N/5D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "chardham-yatra-from-haridwar.html",
+    "title": "Chardham Yatra Ex Haridwar",
+    "price": "₹17,999",
+    "description": "Complete Himalayan pilgrimage covering all four dhams. ₹17,999 per person from Haridwar · minimum 4 persons.",
+    "image": "../images/Chardham-20Yatra-20Ex-20Haridwar.jpeg",
+    "href": "../pages/chardham-yatra-from-haridwar.html",
+    "perPerson": "Per Person",
+    "location": "Char Dham ex Haridwar",
+    "duration": "9N/10D"
+  },
+  {
+    "key": "dodham-yatra-from-haridwar.html",
+    "title": "Do Dham Ex Haridwar",
+    "price": "₹12,500",
+    "description": "Kedarnath and Badrinath from Haridwar with premium facilities and VIP darshan ⛰️",
+    "image": "../images/Do-20Dham-20Yatra-20Ex-20Haridwar-2.jpeg",
+    "href": "../pages/dodham-yatra-from-haridwar.html",
+    "location": "Do Dham ex Haridwar",
+    "duration": "4N/5D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "kedarnath-yatra-from-haridwar.html",
+    "title": "Kedarnath Ex Haridwar",
+    "price": "₹9,500",
+    "description": "A focused Kedarnath yatra. ₹9,500 per person from Haridwar · minimum 4 persons.",
+    "image": "../images/Kedarnath-20Yatra-20Ex-20Haridwar-3.jpeg",
+    "href": "../pages/kedarnath-yatra-from-haridwar.html",
+    "location": "Kedarnath ex Haridwar",
+    "duration": "3N/4D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "chopta-tungnath-tour.html",
+    "title": "Chopta Tungnath",
+    "price": "Chopta Tungnath",
+    "description": "Trek to highest Shiva temple 🏔️",
+    "image": "../images/Chopta-20Tungnath.jpeg",
+    "href": "../pages/chopta-tungnath-tour.html",
+    "perPerson": "Per Person",
+    "location": "(128)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "ladakh-tour-packages.html",
+    "title": "Leh Ladakh",
+    "price": "Leh Ladakh",
+    "description": "Rugged beauty & mountain passes 🏔️",
+    "image": "../images/ladakh.jpeg",
+    "href": "../pages/ladakh-tour-packages.html",
+    "location": "(256)",
+    "duration": "10N/11D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "spiti-valley-tour.html",
+    "title": "Spiti Valley",
+    "price": "Spiti Valley",
+    "description": "Ancient monasteries & landscapes 🏔️",
+    "image": "../images/spitivalley.jpeg",
+    "href": "../pages/spiti-valley-tour.html",
+    "perPerson": "Per Person",
+    "location": "(89)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "valley-of-flowers-tour.html",
+    "title": "Valley Of Flowers",
+    "price": "Valley of Flowers",
+    "description": "UNESCO site with 600+ flowers 🌺",
+    "image": "../images/Valley-20of-20Flowers-4.jpeg",
+    "href": "../pages/valley-of-flowers-tour.html",
+    "perPerson": "Per Person",
+    "location": "(167)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "udaipur-tour.html",
+    "title": "Udaipur",
+    "price": "Udaipur",
+    "description": "Romantic city of lakes 🏰",
+    "image": "../images/Udaipur-4.jpeg",
+    "href": "../pages/udaipur-tour.html",
+    "location": "(203)",
+    "duration": "10N/11D",
+    "perPerson": "Per Person"
+  },
+  {
+    "key": "manali-kasol-solang-sissu-tour.html",
+    "title": "Manali Kasol Solang Sissu",
+    "price": "Manali Kasol Solang",
+    "description": "Adventure & scenic beauty 🏔️",
+    "image": "../images/Manali-20Kasol-20Solang-20Sissu-4.jpeg",
+    "href": "../pages/manali-kasol-solang-sissu-tour.html",
+    "perPerson": "Per Person",
+    "location": "(312)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "jibhi-tour.html",
+    "title": "Jibhi",
+    "price": "Jibhi",
+    "description": "Serene Tirthan Valley 🌲",
+    "image": "../images/Jibhi.jpeg",
+    "href": "../pages/jibhi-tour.html",
+    "perPerson": "Per Person",
+    "location": "(98)",
+    "duration": "Custom itinerary"
+  },
+  {
+    "key": "kauri-pass-trek.html",
+    "title": "Kauri Pass",
+    "price": "Kauri Pass",
+    "description": "Panoramic Nanda Devi views 🏔️",
+    "image": "../images/Kauri-20Pass.jpeg",
+    "href": "../pages/kauri-pass-trek.html",
+    "perPerson": "Per Person",
+    "location": "(76)",
+    "duration": "Custom itinerary"
+  }
+]
